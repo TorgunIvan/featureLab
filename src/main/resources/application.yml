@@ -1,0 +1,42 @@
+app:
+  http:
+    max-connections: 500
+  all-mock:
+    url: http://localhost:1234/mocks/all
+    timeout: 500000
+  string-mock:
+    timeout: 500000
+    url: http://localhost:1234/mocks/string
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  mvc:
+    servlet:
+      path: /feature-lab
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+    include-message: never
+  forward-headers-strategy: framework
+  port: 9876
+  servlet:
+    context-path: /
+    session:
+      timeout: 240m
+  shutdown: graceful
+
+springdoc:
+  api-docs:
+    path: /api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+
+logbook:
+  format:
+    style: splunk
+  write:
+    max-body-size: 1000

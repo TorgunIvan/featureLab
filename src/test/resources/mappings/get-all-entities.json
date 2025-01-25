@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/mocks/all"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "minimum-all-mocks.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
